@@ -10,7 +10,7 @@ module.exports = function karmaConfig (config) {
     reporters: [
       // Reference: https://github.com/mlex/karma-spec-reporter
       // Set reporter to print detailed results to console
-      'progress',
+      'spec',
 
       // Reference: https://github.com/karma-runner/karma-coverage
       // Output code coverage files
@@ -18,7 +18,7 @@ module.exports = function karmaConfig (config) {
     ],
 
     files: [
-      // Grab all files in the app folder that contain .spec.
+      // Grab all files in the app folder that contain .test.
       'src/tests.webpack.js'
     ],
 
@@ -38,18 +38,15 @@ module.exports = function karmaConfig (config) {
 
     // Configure code coverage reporter
     coverageReporter: {
-      dir: 'coverage/',
-      reporters: [
-        {type: 'text-summary'},
-        {type: 'html'}
-      ]
+      dir: 'build/coverage/',
+      type: 'html'
     },
 
-    webpack: require('./webpack.config'),
+    webpack: require('./webpack.test'),
 
     // Hide webpack build information from output
     webpackMiddleware: {
-      noInfo: 'errors-only'
+      noInfo: true
     }
   });
 };
