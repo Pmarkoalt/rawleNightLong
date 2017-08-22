@@ -10,6 +10,5 @@ angular
     'app.home'
   ])
   .config(($urlRouterProvider) => {
-    $urlRouterProvider.otherwise('/home')
+    $urlRouterProvider.otherwise('/')
   })
-

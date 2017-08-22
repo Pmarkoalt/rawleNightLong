@@ -1,3 +1,41 @@
+.home{
+  height: 100%;
+  background-color: black;
+
+  &__logo{
+    height: 40vh;
+  }
+
+  &__main{
+    margin-bottom: 50px;
+
+    &__promo{
+
+      &__img{
+        float:right;
+        margin: 10px;
+      }
+    }
+
+    &__albums{
+      min-width: 230px;
+
+      &__img{
+        margin: 10px;
+      }
+    }
+
+    &__press{
+
+      &__img{
+        float: left;
+        margin: 10px;
+      }
+
+    }
+  }
+}
+
 h1 {
   font-size: 3rem;
 }

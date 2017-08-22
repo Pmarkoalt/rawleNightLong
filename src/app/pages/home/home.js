@@ -13,7 +13,7 @@ angular
   .config(($stateProvider) => {
     $stateProvider
       .state('home', {
-        url: '/home',
+        url: '/',
         views: {
           app: {
             template: HomeTemplate,

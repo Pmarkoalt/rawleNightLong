@@ -3,6 +3,14 @@
 // Should define common styles used throughout the application.
 // Should be defined from specific to generic
 //
+
+html{
+	background-color: black;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
 body {
 	font-family: 'Open Sans', sans-serif;
 }
