@@ -9,15 +9,21 @@
     </div>
   </div>
   <div class="home__main row">
-    <div class="home__main__promo col-md-3 col-lg-4 offset-sm-1">
-      <img class="home__main__promo__img" src="http://via.placeholder.com/350x150" />
-      <img class="home__main__promo__img" src="http://via.placeholder.com/250x250" />
-      <img class="home__main__promo__img" src="http://via.placeholder.com/150x350" />
+    <div class="home__main__promo col-md-4 col-lg-5" >
+      <div class="home__main__promo__container" ng-repeat="Src in home.promoSrc">
+        <img class="home__main__promo__container__img" ng-src="{{Src}}" />
+      </div>
     </div>
     <div class="home__main__albums col-md-4 col-lg-2">
-      <img class="home__main__albums__img" src="http://via.placeholder.com/250x250" />
-      <img class="home__main__albums__img" src="http://via.placeholder.com/250x250" />
-      <img class="home__main__albums__img" src="http://via.placeholder.com/250x250" />
+      <div class="home__main__albums__container">
+        <div class="home__main__albums__container__card">
+          <div class="home__main__albums__container__card__front album" style="background-color: blue; width: 250px; height: 250px;">  </div>
+          <div class="home__main__albums__container__card__back album" style="background-color: red; width: 250px; height: 250px;">  </div>
+        </div>
+      </div>
+      <!-- <button style="color:white;" ng-click="test"> test </button> -->
+      <!-- <img class="home__main__albums__img album" src="http://via.placeholder.com/250x250" />
+      <img class="home__main__albums__img album"  src="http://via.placeholder.com/250x250" /> -->
     </div>
     <div class="home__main__press col-md-3 col-lg-4">
       <img class="home__main__press__img" src="http://via.placeholder.com/150x350" />
@@ -27,3 +33,4 @@
   </div>
 
 </div>
+<!-- <script type="text/javascript" src="vanilla-tilt.js"></script> -->
