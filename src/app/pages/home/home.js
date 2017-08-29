@@ -1,10 +1,7 @@
 import angular from 'angular';
-import uiRouter from 'angular-ui-router'
+import uiRouter from "@uirouter/angularjs"
 import HomeController from './home.controller'
 import HomeTemplate from './home.template.html'
-
-// Directives
-import FooBar from '../../components/foo-bar/foo-bar.component'
 
 angular
   .module('app.home', [
@@ -13,7 +10,7 @@ angular
   .config(($stateProvider) => {
     $stateProvider
       .state('home', {
-        url: '/home',
+        url: '/',
         views: {
           app: {
             template: HomeTemplate,

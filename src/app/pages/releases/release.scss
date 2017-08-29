@@ -1,0 +1,22 @@
+.release{
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: white;
+
+  &__left{
+
+    &__cover{
+      margin-top: 100px;
+    }
+  }
+
+  &__right{
+
+    &__text{
+      margin-top: 50px;
+    }
+  }
+}

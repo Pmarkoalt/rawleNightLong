@@ -1,2 +1,47 @@
-<h1>{{home.message}} {{home.foo()}}</h1>
-<foo-bar comment="home page"></foo-bar>
+<!-- <h1>{{home.message}} {{home.foo()}}</h1>
+<foo-bar comment="home page"></foo-bar> -->
+
+<div class="home">
+  <div class="home__banner row">
+    <!-- <h1> test </h1> -->
+    <div class="col-sm-6 offset-sm-2">
+      <img class="home__logo" id="home__logo" src="logo.png" />
+    </div>
+  </div>
+  <div class="home__main row">
+    <div class="home__main__promo col-md-4 col-lg-5" >
+      <div class="home__main__promo__container" ng-repeat="Src in home.promoSrc">
+        <img class="home__main__promo__container__img" ng-src="{{Src}}" />
+      </div>
+    </div>
+    <div class="home__main__albums col-md-4 col-lg-2">
+      <div class="home__main__albums__container" ng-repeat="mix in home.mixes">
+        <div class="cardWrapper" ng-class="{'mouseOn': cardFlip, 'mouseOff': !cardFlip }" ng-mouseover="home.hoverIn(this)" ng-mouseleave="home.hoverOut(this)">
+          <div class="card" ng-mouseover="">
+            <div style="height: 250px; width: 250px" class="cardFace front" ><h1>{{mix.title}}</h1></div>
+            <!-- <div class="cardFace back"><h1>back</h1></div> -->
+          </div>
+        </div>
+      </div>
+      <!-- <button style="color:white;" ng-click="test"> test </button> -->
+      <!-- <img class="home__main__albums__img album" src="http://via.placeholder.com/250x250" />
+      <img class="home__main__albums__img album"  src="http://via.placeholder.com/250x250" /> -->
+    </div>
+    <div class="home__main__press col-md-3 col-lg-4">
+      <div class="home__main__press__tourContainer">
+        <h1> Tour Dates </h1>
+        <div class="home__main__press__tourContainer__tourDate" ng-repeat="date in home.tourDates">
+          <h3> {{date.title}} </h3>
+          <h4> {{date.venue}} </h4>
+          <p> {{date.date}} <p>
+          <a target="_blank" href="{{date.tickets}}"> Buy Tickets </a>
+        </div>
+      </div>
+      <img class="home__main__press__img" src="http://via.placeholder.com/150x350" />
+      <img class="home__main__press__img" src="http://via.placeholder.com/200x150" />
+      <img class="home__main__press__img" src="http://via.placeholder.com/250x250" />
+    </div>
+  </div>
+
+</div>
+<!-- <script type="text/javascript" src="vanilla-tilt.js"></script> -->
