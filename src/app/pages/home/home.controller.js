@@ -1,18 +1,21 @@
 
-import promoSrc from "./promoSrc.js";
+import {promoSrc, tourDates, mixes}  from "./home.data.js";
+import {TweenMax} from "gsap";
 
 class HomeController {
   constructor() {
-    this.message = 'Hello'
+    this.cardFlip = false
     this.promoSrc = promoSrc
-    this.test= "test"
+    this.tourDates = tourDates
+    this.mixes = mixes
   }
-  foo() {
-    return 'world'
+  hoverIn(context){
+    context.cardFlip = true;
   }
-  test(){
-    console.log(this.test)
+  hoverOut(context){
+    context.cardFlip = false;
   }
+
 
 }
 

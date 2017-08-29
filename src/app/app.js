@@ -7,8 +7,6 @@ import styles from './styles/main.scss'
 
 angular
   .module('app', [
-    'app.components',
-
     'app.home',
 
     // 'app.release'

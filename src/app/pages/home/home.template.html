@@ -15,10 +15,12 @@
       </div>
     </div>
     <div class="home__main__albums col-md-4 col-lg-2">
-      <div class="home__main__albums__container">
-        <div class="home__main__albums__container__card">
-          <div class="home__main__albums__container__card__front album" style="background-color: blue; width: 250px; height: 250px;">  </div>
-          <div class="home__main__albums__container__card__back album" style="background-color: red; width: 250px; height: 250px;">  </div>
+      <div class="home__main__albums__container" ng-repeat="mix in home.mixes">
+        <div class="cardWrapper" ng-class="{'mouseOn': cardFlip, 'mouseOff': !cardFlip }" ng-mouseover="home.hoverIn(this)" ng-mouseleave="home.hoverOut(this)">
+          <div class="card" ng-mouseover="">
+            <div style="height: 250px; width: 250px" class="cardFace front" ><h1>{{mix.title}}</h1></div>
+            <!-- <div class="cardFace back"><h1>back</h1></div> -->
+          </div>
         </div>
       </div>
       <!-- <button style="color:white;" ng-click="test"> test </button> -->
@@ -26,6 +28,15 @@
       <img class="home__main__albums__img album"  src="http://via.placeholder.com/250x250" /> -->
     </div>
     <div class="home__main__press col-md-3 col-lg-4">
+      <div class="home__main__press__tourContainer">
+        <h1> Tour Dates </h1>
+        <div class="home__main__press__tourContainer__tourDate" ng-repeat="date in home.tourDates">
+          <h3> {{date.title}} </h3>
+          <h4> {{date.venue}} </h4>
+          <p> {{date.date}} <p>
+          <a target="_blank" href="{{date.tickets}}"> Buy Tickets </a>
+        </div>
+      </div>
       <img class="home__main__press__img" src="http://via.placeholder.com/150x350" />
       <img class="home__main__press__img" src="http://via.placeholder.com/200x150" />
       <img class="home__main__press__img" src="http://via.placeholder.com/250x250" />
