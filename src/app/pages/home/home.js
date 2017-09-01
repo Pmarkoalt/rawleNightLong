@@ -20,3 +20,44 @@ angular
         }
       })
   })
+  .directive('album', function(){
+    //vendor prefixes cross browser
+    TweenLite.set(".cardWrapper", {perspective:800});
+    TweenLite.set(".card", {transformStyle:"preserve-3d"});
+    TweenLite.set(".back", {rotationY:-180});
+    TweenLite.set([".back", ".front"], {backfaceVisibility:"hidden"});
+    TweenMax.staggerTo($(".card"), 1, {rotationY:-180, repeat:1, yoyo:true}, 0.1);
+
+    return {
+      restrict: 'A',
+      link: function ($scope, element, attrs) {
+        $scope.initAlbum = () => {
+          TweenLite.set(".cardWrapper", {perspective:800});
+          TweenLite.set(".card", {transformStyle:"preserve-3d"});
+          TweenLite.set(".back", {rotationY:-180});
+          TweenLite.set([".back", ".front"], {backfaceVisibility:"hidden"});
+          TweenMax.staggerTo($(".card"), 1, {rotationY:-180, repeat:1, yoyo:true}, 0.1);
+        }
+        element.on('mouseenter', function () {
+           TweenLite.to($(this).find(".card"), 1.2, {rotationY:180, ease:Back.easeOut});
+        });
+        element.on('mouseleave', function () {
+          TweenLite.to($(this).find(".card"), 1.2, {rotationY:0, ease:Back.easeOut});
+        });
+        $scope.initAlbum()
+      }
+    }
+
+
+    // $(".cardWrapper").hover(
+    //   function() {
+    //     console.log("test");
+    //     TweenLite.to($(this).find(".card"), 1.2, {rotationY:180, ease:Back.easeOut});
+    //   },
+    //   function() {
+    //     TweenLite.to($(this).find(".card"), 1.2, {rotationY:0, ease:Back.easeOut});
+    //   }
+    // );
+    // TweenMax.staggerTo($(".card"), 1, {rotationY:-180, repeat:1, yoyo:true}, 0.1);
+
+  });
