@@ -18,6 +18,7 @@ const tourDates = [{
 const mixes = [{
   title: "SiriusXM #GuestRoomMix 02/09/17: #Jersey Edition",
   src: "https://api.soundcloud.com/tracks/314297258/stream?client_id=95f22ed54a5c297b1c41f72d713623ef",
+  img: "./img/release_1.jpg",
   shortDescription: "Jersey House Guest Room Mix for SiriusXM on 02/09/17",
   longDescription: `brought some #jersey to the #GuestRoomMix...shout out @dj4b, @sliinkofficial, @trippy-turtle, and the whole #CartelMusic squad
 
@@ -50,6 +51,7 @@ help me (vip) - gta`
 {
   title: "SiriusXM Electric Area #GuestRoomMix 06/30/2016",
   src: "https://api.soundcloud.com/tracks/271726800/stream?client_id=95f22ed54a5c297b1c41f72d713623ef",
+  img: "./img/release_1.jpg",
   shortDescription: "My first Guest Room Mix for Electric Area on SiriusXM",
   longDescription: `brought some #house to the Electric Area #GuestRoomMix
 

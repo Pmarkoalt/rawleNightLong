@@ -67,21 +67,54 @@
   }
 }
 
-.album{
-  margin: 0;
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
+.cardWrapper{
+  width:200px;
+  height:200px;
+  position:relative;
+  margin-bottom: 20px;
+}
+
+.cardFace{
+  position:absolute;
+  width:200px;
+  height:200px;
+  overflow:hidden;
+  background-size: cover;
+
+}
+
+
+.moreInfo{
+  padding:10px;
+  color:white;
+  line-height:24px;
+
+}
+
+.front{
+  background-color: red;
+}
+
+.back{
+  background-color: blue;
 }
 
 .mouseOn{
-  border: solid red 2px
+  transform: scale(1.1);
+  transition: all .5s;
 }
 
 .mouseOff{
-  border: solid purple 2px
+  transition: all .5s;
+}
+
+.borderOn{
+  border: solid 5px orange;
+}
+
+.fullPhoto{
+  transform: scale(4);
+  z-index: 10;
 }
 
 h1 {
