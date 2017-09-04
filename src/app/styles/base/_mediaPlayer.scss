@@ -1,0 +1,36 @@
+//
+// Mixins
+//
+//
+
+audio{
+  width: 100%;
+}
+
+footer{
+  width: 100%;
+  position: fixed;
+  bottom:0;
+  display: flex !important;
+  flex-direction: row;
+}
+
+.audio-player-div{
+  width: 80%;
+}
+
+.socials{
+  background-color: black;
+  width:20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  &__svg{
+    width: 100%;
+    max-width: 50px;
+    margin:2px;
+    display: block;
+  }
+}
