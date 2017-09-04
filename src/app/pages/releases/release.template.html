@@ -1,16 +1,10 @@
-<!-- <h1>{{home.message}} {{home.foo()}}</h1>
-<foo-bar comment="home page"></foo-bar> -->
-
 <div class="release row">
     <div class="release__left offset-sm-1 col-sm-4">
       <img class="release__left__cover" src="./img/release_1.jpg" />
     </div>
 
     <div class="release__right offset-sm-2 col-sm-4">
-      <p class="release__right__text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dapibus velit, ut interdum elit. Sed nisi metus, eleifend in arcu in, aliquam auctor metus. Maecenas non luctus dolor. Nulla fermentum dapibus rhoncus. Duis facilisis accumsan mauris eget volutpat. Nullam tincidunt, lectus quis feugiat tempus, nibh lacus convallis metus, eget porttitor felis turpis sit amet risus. Integer a faucibus turpis. Aenean tincidunt vehicula massa id elementum. Maecenas a pharetra enienatibus et magnis dis parturient montes, nascetur ridiculus mus. In varius ultricies orci, quis congue ante accumsan nec. In hac habitasse platea dictumst.
-      </p>
-      <br>
-      <p class="release__right__text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dapibus velit, ut interdum elit. Sed nisi metus, eleifend in arcu in, aliquam auctor metus. Maecenas non luctus dolor. Nulla fermentum dapibus rhoncus. Duis facilisis accumsan mauris eget volutpat. Nullam tincidunt, lectus quis feugiat tempus, nibh lacus convallis metus, eget porttitor felis turpis sit amet risus. Integer a faucibus turpis. Aenean tincidunt vehicula massa id elementum. Maecenas a pharetra enim. Nulla efficitur arcu vitae augue suscipit, quis accumsan urna consequat. Maecenas quis tellus ut felis interdum sagittis vitae a justo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In varius ultricies orci, quis congue ante accumsan nec. In hac habitasse platea dictumst.
-      </p>
+      <p class="release__right__text"> {{release.thisRelease.longDescription}} </p>
     </div>
 </div>
+<button ui-sref="home()"> Home </button>

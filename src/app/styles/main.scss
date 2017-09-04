@@ -1,10 +1,12 @@
 //Reset
 @import "vendor/reset";
+@import "vendor/plyr";
+@import "vendor/bootstrap.min";
 
 // Variables, functions, mixins and utils
 @import "base/_variables";
 @import "base/_functions";
-@import "base/_mixins";
+@import "base/_mediaPlayer";
 @import "base/_utils";
 
 // Base/generic style rules

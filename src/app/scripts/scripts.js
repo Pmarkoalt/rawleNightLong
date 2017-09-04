@@ -1,7 +1,9 @@
 import $ from "jquery";
+import plyr from "plyr";
 
-import {TweenMax} from "gsap";
 
-$(".home__main__promo__container__img").on("click", function(){
-  console.log("test");
+
+$( document ).ready(function() {
+    console.log( "ready!" );
+    plyr.setup();
 });
