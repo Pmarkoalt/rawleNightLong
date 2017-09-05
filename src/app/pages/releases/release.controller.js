@@ -8,9 +8,11 @@ var thisRelease = mixes.find(findMatch);
 // { name: 'cherries', quantity: 5 }
 
 class ReleaseController {
-  constructor() {
+  constructor($scope,$http,$stateParams,$state) {
     this.message = 'Hello'
     this.thisRelease = thisRelease
+    this.stateParams = $stateParams;
+    this.state = $state;
   }
   foo() {
     return 'world'

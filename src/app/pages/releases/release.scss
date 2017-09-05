@@ -5,16 +5,22 @@
   -o-background-size: cover;
   background-size: cover;
   background-color: white;
+  display: flex;
+  flex-direction: row;
 
   &__left{
-
+    width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
     &__cover{
       margin-top: 100px;
     }
   }
 
   &__right{
-
+    width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
     &__text{
       margin-top: 50px;
     }

@@ -1,6 +1,8 @@
 import {promoSrc, tourDates, mixes}  from "./home.data.js";
 import plyr from "plyr";
 import $ from 'jquery'
+import uiRouter from "@uirouter/angularjs";
+
 
 class HomeController {
   constructor() {
@@ -31,6 +33,7 @@ class HomeController {
       $('button[data-plyr="pause"]').click();
     }
   }
+
 
 
 }

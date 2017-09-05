@@ -1,19 +1,17 @@
 <!-- <h1>{{home.message}} {{home.foo()}}</h1>
 <foo-bar comment="home page"></foo-bar> -->
 
-<div class="home row" ng-init="home.init()">
-  <div class="home__banner row">
-    <div class="col-sm-6">
+<div class="home">
+  <div class="home__banner">
       <img class="home__logo" id="home__logo" src="img/logo.png" />
-    </div>
   </div>
-  <div class="home__main row">
-    <div class="home__main__promo col-md-4 col-lg-5" >
-      <div class="home__main__promo__container" ng-repeat="Src in home.promoSrc">
-        <img class="home__main__promo__container__img" ng-click="home.promoZoom(this)" ng-class="{'fullPhoto': promoZoom, 'smallPhoto': !promoZoom}" ng-init="promoZoom = false" ng-src="{{Src}}" />
+  <div class="home__main">
+    <div class="home__main__promo">
+      <div class="home__main__promo__container" ng-repeat="Src in home.promoSrc" ng-click="home.promoZoom(this)" ng-class="{'fullPhoto': promoZoom, 'smallPhoto': !promoZoom}">
+        <img class="home__main__promo__container__img"   ng-init="promoZoom = false" ng-src="{{Src}}" />
       </div>
     </div>
-    <div class="home__main__albums col-md-4 col-lg-2">
+    <div class="home__main__albums">
       <div album class="cardWrapper" ng-repeat="mix in home.mixes">
         <div class="card">
           <div class="cardFace front">
@@ -30,7 +28,7 @@
         </div>
       </div>
     </div>
-    <div class="home__main__press col-md-3 col-lg-4">
+    <div class="home__main__press">
       <div class="home__main__press__tourContainer">
         <h1> Tour Dates </h1>
         <div class="home__main__press__tourContainer__tourDate" ng-repeat="date in home.tourDates">
