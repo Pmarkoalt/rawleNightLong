@@ -4,17 +4,22 @@
 
   &__logo{
     height: 40vh;
+    margin-left: 300px;
   }
 
   &__main{
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
 
     &__promo{
+      width: 100%;
 
       &__container{
         float:right;
         margin: 10px;
         max-width: 33%;
+
         &__img{
           width: 100%;
           transform: scale(1);
@@ -27,6 +32,10 @@
 
     &__albums{
       min-width: 230px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
       &__container{
         margin: 10px;
@@ -48,6 +57,8 @@
     }
 
     &__press{
+      width: 100%;
+      float: left;
 
       &__tourContainer{
         background-color: white;
@@ -109,13 +120,12 @@
 
 //Increase photo effect
 .fullPhoto{
-  transform: scale(4);
+  max-width: 80%;
   transition: all .25s;
   z-index: 10;
 }
 
 .smallPhoto{
-  transform: scale(1);
   transition: all .25s;
 }
 
