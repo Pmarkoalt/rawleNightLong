@@ -21,7 +21,7 @@ const mixes = [{
   img: "./img/release_1.jpg",
   urlName: "020917jersey",
   shortDescription: "Jersey House Guest Room Mix for SiriusXM on 02/09/17",
-  longDescription: `brought some #jersey to the #GuestRoomMix...shout out @dj4b, @sliinkofficial, @trippy-turtle, and the whole #CartelMusic squad
+  longDescription: `<p>brought some #jersey to the #GuestRoomMix...shout out @dj4b, @sliinkofficial, @trippy-turtle, and the whole #CartelMusic squad</p>
 
 utopia (4b remix/intro edit) - dombresky
 furthest thing - trippy turtle

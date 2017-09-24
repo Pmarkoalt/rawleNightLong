@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A workflow for Angular made with Webpack",
   "scripts": {
-    "build": "webpack --config webpack.build.js --bail",
+    "build": "webpack --config webpack.build.js --bail --watch",
     "dev": "webpack-dev-server --history-api-fallback --inline --progress",
     "test": "karma start",
     "test:live": "karma start --auto-watch --no-single-run"
@@ -23,6 +23,9 @@
     "@uirouter/core": "^5.0.6",
     "angular": "^1.6.6",
     "angular-animate": "^1.6.6",
+    "buttercms": "^1.0.17",
+    "contentful": "^4.6.1",
+    "express": "^4.15.4",
     "gsap": "^1.20.2",
     "jquery": "^3.2.1",
     "plyr": "^2.0.13"
