@@ -3,27 +3,28 @@ import plyr from "plyr";
 import $ from 'jquery'
 import uiRouter from "@uirouter/angularjs";
 
+function HomeController($scope){
 
-class HomeController {
-  constructor() {
-    this.promoSrc = promoSrc
-    this.tourDates = tourDates
-    this.mixes = mixes
-  }
+  $scope.promoSrc = promoSrc;
+  $scope.tourDates = tourDates;
+  $scope.mixes = mixes;
 
-  hoverIn(context){
+  $scope.hoverIn = function(context){
     context.cardZoom = true;
   }
-  hoverOut(context){
+
+  $scope.hoverOut = function(context){
     context.cardZoom = false;
   }
-  promoZoom(context){
-    if (context.promoZoom === false){
-      return context.promoZoom = true
+
+  $scope.promoZoom = function(context){
+    if ( conext.promoZoom === false ){
+      return context.promoZoom = true;
     }
-      context.promoZoom = false
+    context.promozoom = false;
   }
-  newMusic(src){
+
+  $scope.newMusic = function(src){
     var current = document.getElementById("audio-player").src
     if (current !== src){
       document.getElementById("audio-player").src=src;
@@ -35,9 +36,42 @@ class HomeController {
   }
 
 
-
 }
 
-HomeController.$inject = []
+// class HomeController {
+//   constructor() {
+//     this.promoSrc = promoSrc
+//     this.tourDates = tourDates
+//     this.mixes = mixes
+//   }
+//
+//   hoverIn(context){
+//     context.cardZoom = true;
+//   }
+//   hoverOut(context){
+//     context.cardZoom = false;
+//   }
+//   promoZoom(context){
+//     if (context.promoZoom === false){
+//       return context.promoZoom = true
+//     }
+//       context.promoZoom = false
+//   }
+//   newMusic(src){
+//     var current = document.getElementById("audio-player").src
+//     if (current !== src){
+//       document.getElementById("audio-player").src=src;
+//       $('button[data-plyr="pause"]').click();
+//     }
+//     else{
+//       $('button[data-plyr="pause"]').click();
+//     }
+//   }
+//
+//
+//
+// }
+
+HomeController.$inject = ['$scope']
 
 module.exports = HomeController
