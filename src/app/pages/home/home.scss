@@ -1,6 +1,7 @@
 .home{
   height: 100%;
-  background-color: black;
+  background-color: #111;
+  font-family: "acumin-pro",sans-serif;
 
   &__logo{
     height: 40vh;
@@ -59,12 +60,13 @@
     &__press{
       width: 100%;
       float: left;
+      color: white;
 
       &__tourContainer{
-        background-color: white;
+        background-color: #111;
 
         &__tourDate{
-          background-color: white;
+          background-color: #111;
           border-bottom: solid 2px black;
         }
       }
@@ -116,6 +118,14 @@
   &__moreInfo{
 
   }
+}
+
+.tourHeader{
+  font-family: "acumin-pro",sans-serif;
+}
+
+.tourText{
+  font-family: "acumin-pro",sans-serif;
 }
 
 //Increase photo effect

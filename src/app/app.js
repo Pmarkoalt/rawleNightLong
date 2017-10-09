@@ -1,6 +1,7 @@
 import angular from 'angular'
 import $ from 'jquery'
 import {TweenMax} from "gsap"
+import ngAnimate from 'angular-animate'
 
 import scripts from './scripts/scripts'
 import twitter from './scripts/twitter'
@@ -14,8 +15,8 @@ import styles from './styles/main.scss'
 angular
   .module('app', [
     'app.home',
-
-    'app.release'
+    'app.release',
+    'ngAnimate'
   ])
   .config(($urlRouterProvider) => {
     $urlRouterProvider.otherwise('/')

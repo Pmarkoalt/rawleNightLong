@@ -1,28 +1,102 @@
 .release{
-  height: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-color: white;
-  display: flex;
-  flex-direction: row;
+  min-height: 100vh;
+  background-color: #111;
+  color: white;
 
-  &__left{
-    width: 100%;
-    margin-left: 10%;
-    margin-right: 10%;
-    &__cover{
-      margin-top: 100px;
+  &__back{
+    position: fixed;
+    top: 50px;
+    left: 50px;
+
+    &__img{
+      width: 40px;
     }
   }
 
-  &__right{
+  &__ticker-wrap{
+    position: fixed;
+    top: 0;
     width: 100%;
-    margin-left: 10%;
-    margin-right: 10%;
-    &__text{
-      margin-top: 50px;
+    overflow: hidden;
+    height: 4rem;
+    padding-left: 100%;  // offset items to begin
+
+    &__ticker{
+
+      display: inline-block;
+      height: 4rem;
+      line-height: 4rem;
+      white-space: nowrap; // display items in a line
+      padding-right: 100%; // ensure items go before animations repeat (taken from parent due to inline-block)
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+      -webkit-animation-name: ticker;
+      animation-name: ticker;
+      -webkit-animation-duration: 50s;
+      animation-duration: 50s;
+
+      &__item{
+        display: inline-block;
+        padding: 0 2rem;
+        font-size: 25px;
+        color: white;
+      }
     }
+  }
+
+  &__content{
+    display: flex;
+    flex-direction: row;
+
+    &__left{
+      width: 100%;
+      margin-left: 10%;
+      margin-right: 10%;
+      &__cover{
+        margin-top: 100px;
+      }
+    }
+
+    &__right{
+      width: 100%;
+      margin-top: 100px;
+      margin-left: 10%;
+      margin-right: 10%;
+      &__text{
+
+      }
+    }
+
+  }
+
+
+}
+
+
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-130%, 0, 0);
+    transform: translate3d(-130%, 0, 0);
+  }
+}
+
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-130%, 0, 0);
+    transform: translate3d(-130%, 0, 0);
   }
 }

@@ -8,7 +8,8 @@
   <div class="home__main">
     <div class="home__main__promo">
       <div class="home__main__promo__container" ng-repeat="Src in home.promoSrc" ng-click="home.promoZoom(this)" ng-class="{'fullPhoto': promoZoom, 'smallPhoto': !promoZoom}">
-        <img class="home__main__promo__container__img"   ng-init="promoZoom = false" ng-src="{{Src}}" />
+        <img class="home__main__promo__container__img" alt="{{Src.sys.id}}" ng-init="promoZoom = false" ng-src="{{Src.fields.file.url}}" />
+
       </div>
     </div>
     <div class="home__main__albums">
@@ -32,9 +33,9 @@
       <div class="home__main__press__tourContainer">
         <h1> Tour Dates </h1>
         <div class="home__main__press__tourContainer__tourDate" ng-repeat="date in home.tourDates">
-          <h3> {{date.title}} </h3>
-          <h4> {{date.venue}} </h4>
-          <p> {{date.date}} <p>
+          <h3 class="tourHeader"> {{date.title}} </h3>
+          <h4 class="tourText"> {{date.venue}} </h4>
+          <p class="tourText"> {{date.date}} <p>
           <a target="_blank" href="{{date.tickets}}"> Buy Tickets </a>
         </div>
       </div>
