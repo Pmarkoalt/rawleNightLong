@@ -7,10 +7,10 @@
         <div class="release__ticker-wrap__ticker__item"> {{release.thisRelease.header}} </div>
       </div>
     </div>
-    <a class="release__back" ui-sref="home"> <img class="release__back__img" src="favicons/back.svg" /> </a>
+    <a class="release__back" ui-sref="home"> <img class="release__back__img" src="./public/favicons/back.svg" /> </a>
     <div class="release__content">
       <div class="release__content__left">
-        <img class="release__content__left__cover" src="./img/release_1.jpg" />
+        <img class="release__content__left__cover" ng-src={{release.thisRelease.img}} />
       </div>
 
       <div class="release__content__right">

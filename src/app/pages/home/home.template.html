@@ -3,7 +3,7 @@
 
 <div class="home">
   <div class="home__banner">
-      <img class="home__logo" id="home__logo" src="img/logo.png" />
+      <img class="home__logo" id="home__logo" src="public/img/logo.png" />
   </div>
   <div class="home__main">
     <div class="home__main__promo">
@@ -23,7 +23,7 @@
               <img ng-click="home.newMusic(mix.src)" src="http://www.pngmart.com/files/3/Play-Button-PNG-Picture.png" />
             </div>
             <div class="back__moreInfo">
-              <a style="background-color=white; color: white;" ui-sref="release({releaseId: '{{mix.urlName}}'})"> More Info </a>
+              <a style="background-color=white; color: white;" ui-sref="release({releaseId: '{{mix.urlName}}'})"> <img class="back__moreInfo__more" src="./public/favicons/more.svg" /> </a>
             </div>
           </div>
         </div>
