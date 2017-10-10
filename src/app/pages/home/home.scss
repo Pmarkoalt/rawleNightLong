@@ -25,6 +25,12 @@
         &__img{
           width: 100%;
           transform: scale(1);
+          transition: all .5s;
+        }
+
+        &__img:hover{
+          box-shadow: -3px 1px 3px black;
+          transform: scale(1.1);
         }
 
       }
@@ -70,7 +76,27 @@
 
         &__tourDate{
           background-color: #111;
-          border-bottom: solid 2px black;
+          box-shadow: -3px 1px 3px black;
+          margin-bottom: 10px;
+          padding: 5px;
+          display: flex;
+          flex-direction: row;
+          position: relative;
+          transform: scale(1);
+          transition: all .5s;
+
+          &__details{
+            width: 66%;
+          }
+
+          &__tickets{
+            width: 33%;
+          }
+
+        }
+
+        &__tourDate:hover{
+          transform: scale(1.1);
         }
       }
 
@@ -104,15 +130,27 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background-color: pink;
+  background-color: #ff0090;
 
   &__button img{
-    -webkit-filter: drop-shadow(6px 6px 3.5px rgba(0,0,0,0.5));
-	  filter: drop-shadow(6px 6px 3.5px rgba(0,0,0,0.5));
+    -webkit-filter: drop-shadow(-2px 3px 3px rgba(0, 0, 0, 0.5));
+	  filter: drop-shadow(-2px 3px 3px rgba(0, 0, 0, 0.5));
     transition: all .1s;
   }
 
   &__button img:active{
+    -webkit-filter: drop-shadow(0px 0px 0px rgba(0,0,0,0.5));
+    filter: drop-shadow(0px 0px 0px rgba(0,0,0,0.5));
+    transition: all .1s;
+  }
+
+  &__moreInfo__more{
+    -webkit-filter: drop-shadow(-2px 3px 3px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(-2px 3px 3px rgba(0, 0, 0, 0.5));
+    transition: all .1s;
+  }
+
+  &__moreInfo__more:active{
     -webkit-filter: drop-shadow(0px 0px 0px rgba(0,0,0,0.5));
     filter: drop-shadow(0px 0px 0px rgba(0,0,0,0.5));
     transition: all .1s;
@@ -129,10 +167,33 @@
 
 .tourHeader{
   font-family: "acumin-pro",sans-serif;
+  font-size: 20px
 }
 
 .tourText{
   font-family: "acumin-pro",sans-serif;
+  font-size: 18px;
+}
+
+.tourTicket{
+  transition: all .5s;
+  position: absolute;
+  bottom: 10px;
+  right: 50px;
+}
+
+.tourTicket:hover{
+  color: #ff0090
+}
+
+#more{
+  transform: scale(1.6);
+    margin-right: 20px;
+}
+
+#play{
+  transform: scale(1.7);
+  margin-left: 30px;
 }
 
 //Increase photo effect

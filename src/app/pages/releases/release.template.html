@@ -1,10 +1,10 @@
 <div class="release">
     <div class="release__ticker-wrap">
       <div class="release__ticker-wrap__ticker">
-        <div class="release__ticker-wrap__ticker__item"> {{release.thisRelease.header}} </div>
-        <div class="release__ticker-wrap__ticker__item"> {{release.thisRelease.header}} </div>
-        <div class="release__ticker-wrap__ticker__item"> {{release.thisRelease.header}} </div>
-        <div class="release__ticker-wrap__ticker__item"> {{release.thisRelease.header}} </div>
+        <div class="release__ticker-wrap__ticker__item"> {{release.thisRelease.header.toUpperCase()}} </div>
+        <div class="release__ticker-wrap__ticker__item"> {{release.thisRelease.header.toUpperCase()}} </div>
+        <div class="release__ticker-wrap__ticker__item"> {{release.thisRelease.header.toUpperCase()}} </div>
+        <div class="release__ticker-wrap__ticker__item"> {{release.thisRelease.header.toUpperCase()}} </div>
       </div>
     </div>
     <a class="release__back" ui-sref="home"> <img class="release__back__img" src="./public/favicons/back.svg" /> </a>
@@ -14,10 +14,10 @@
       </div>
 
       <div class="release__content__right">
-        <ol class="release__content__right__list">
-          <li class="release__content__right__list__item" ng-repeat="line in release.thisRelease.trackList" class="release__content__right__text"> {{$index}}.  {{line}} </p>
-        </ol>
+        <div class="release__content__right__item" ng-repeat="line in release.thisRelease.trackList">
+           <span> <p class="release__content__right__item__song"  class="release__content__right__text"> {{$index}}.  {{line.song.toUpperCase()}} </p> </span>
+           <span> <p class="release__content__right__item__artist"  class="release__content__right__text"> {{line.artist.toUpperCase()}} </p> </span>
+        </div>
       </div>
     </div>
 </div>
-<button ui-sref="home()"> Home </button>

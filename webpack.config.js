@@ -1,11 +1,12 @@
 'use strict';
 
 // Modules
-var webpack = require('webpack');
+const webpack = require('webpack');
 const path = require('path');
-var autoprefixer = require('autoprefixer');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
     debug: true,
@@ -41,6 +42,10 @@ module.exports = {
           },{
             test: /\.css$/,
             loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss')
+          },
+          {
+            test: /\.json$/,
+            loader: 'json-loader'
           }
 
         ]
@@ -55,11 +60,26 @@ module.exports = {
       new ExtractTextPlugin('[name].[hash].css'),
       // Only emit files when there are no errors
       new webpack.NoErrorsPlugin(),
+
+      new Dotenv({
+        path: './.env', // Path to .env file (this is the default)
+        safe: false // load .env.example (defaults to "false" which does not use dotenv-safe)
+      }),
+
       // Dedupe modules in the output
       // new webpack.optimize.DedupePlugin(),
       // // Minify all javascript, switch loaders to minimizing mode
       // new webpack.optimize.UglifyJsPlugin()
     ],
+    resolve: {
+      extensions: ['', '.webpack.js', '.web.js', '.js']
+    },
+    node: {
+      console: 'empty',
+      fs: 'empty',
+      net: 'empty',
+      tls: 'empty'
+    },
     devServer: {
       contentBase: './public',
       stats: {
