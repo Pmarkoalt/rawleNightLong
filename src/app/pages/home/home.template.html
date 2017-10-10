@@ -3,12 +3,13 @@
 
 <div class="home">
   <div class="home__banner">
-      <img class="home__logo" id="home__logo" src="img/logo.png" />
+      <img class="home__logo rythm pulse1" id="home__logo" src="public/img/logo.png" />
   </div>
   <div class="home__main">
     <div class="home__main__promo">
       <div class="home__main__promo__container" ng-repeat="Src in home.promoSrc" ng-click="home.promoZoom(this)" ng-class="{'fullPhoto': promoZoom, 'smallPhoto': !promoZoom}">
-        <img class="home__main__promo__container__img"   ng-init="promoZoom = false" ng-src="{{Src}}" />
+        <img class="home__main__promo__container__img" alt="{{Src.sys.id}}" ng-init="promoZoom = false" ng-src="{{Src.fields.file.url}}" />
+
       </div>
     </div>
     <div class="home__main__albums">
@@ -19,10 +20,10 @@
           </div>
           <div class="cardFace back">
             <div style="width: 50%;" class="back__button">
-              <img ng-click="home.newMusic(mix.src)" src="http://www.pngmart.com/files/3/Play-Button-PNG-Picture.png" />
+              <img id="play" ng-click="home.newMusic(mix.src)" src="./public/favicons/play.svg" />
             </div>
             <div class="back__moreInfo">
-              <a style="background-color=white; color: white;" ui-sref="release({releaseId: '{{mix.urlName}}'})"> More Info </a>
+              <a style="background-color=white; color: white;" ui-sref="release({releaseId: '{{mix.urlName}}'})"> <img id="more" class="back__moreInfo__more" src="./public/favicons/more.png" /> </a>
             </div>
           </div>
         </div>
@@ -32,10 +33,14 @@
       <div class="home__main__press__tourContainer">
         <h1> Tour Dates </h1>
         <div class="home__main__press__tourContainer__tourDate" ng-repeat="date in home.tourDates">
-          <h3> {{date.title}} </h3>
-          <h4> {{date.venue}} </h4>
-          <p> {{date.date}} <p>
-          <a target="_blank" href="{{date.tickets}}"> Buy Tickets </a>
+          <div class="home__main__press__tourContainer__tourDate__details">
+            <h3 class="tourHeader"> {{date.title}} </h3>
+            <h4 class="tourText"> {{date.venue}} </h4>
+            <p class="tourText"> {{date.date}} <p>
+          </div>
+          <div class="home__main__press__tourContainer__tourDate__tickets">
+            <a class="tourText tourTicket"target="_blank" href="{{date.tickets}}"> Buy Tickets </a>
+          </div>
         </div>
       </div>
       <div class="home__main__press__twitterContainer">

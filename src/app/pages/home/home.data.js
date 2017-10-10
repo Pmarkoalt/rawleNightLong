@@ -15,7 +15,8 @@ const tourDates = [{
   venue: "U Street Music Hall",
   tickets: "https://www.ticketfly.com/purchase/event/1525444"
 }];
-const mixes = [{
+const mixes = {
+  '020917jersey' : {
   title: "SiriusXM #GuestRoomMix 02/09/17: #Jersey Edition",
   src: "https://api.soundcloud.com/tracks/314297258/stream?client_id=95f22ed54a5c297b1c41f72d713623ef",
   img: "./img/release_1.jpg",
@@ -49,7 +50,7 @@ bad blood (tr!ck$ bootleg) - bastille
 100it racks (smasha bootleg) - future
 help me (vip) - gta`
 },
-{
+"063016jersey" : {
   title: "SiriusXM Electric Area #GuestRoomMix 06/30/2016",
   src: "https://api.soundcloud.com/tracks/271726800/stream?client_id=95f22ed54a5c297b1c41f72d713623ef",
   img: "./img/release_1.jpg",
@@ -82,5 +83,5 @@ rod fussy & fatbass - dust 'n' smoke
 siriusxmElectricareaelectric areahousetechtech housedirtybirdlost recordshot creationsclaudevonstrokekill frenzyleftwingkodydennis ferrersolardoIbizatechyesguestroommix
 `
 },
-]
+}
 export {promoSrc, tourDates, mixes};

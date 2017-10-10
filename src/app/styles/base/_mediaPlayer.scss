@@ -20,7 +20,7 @@ footer{
 }
 
 .socials{
-  background-color: black;
+  background-color: #111;
   width:20%;
   display: flex;
   flex-direction: row;
@@ -33,4 +33,22 @@ footer{
     margin:2px;
     display: block;
   }
+}
+
+#sc{
+  transform: scale(1.1);
+}
+
+#tw{
+  transform: scale(1.3);
+  margin-bottom: 1px;
+  margin-right: 5px;
+}
+
+#twCont{
+  margin-right: 10px;
+}
+
+#ig{
+    height: 26px;
 }
