@@ -26,14 +26,7 @@ angular
         }
       })
   })
-  .directive('album', function(){
-    window.twttr = (function (d,s,id) {
-      var t, js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
-      js.src="https://platform.twitter.com/widgets.js";
-      fjs.parentNode.insertBefore(js, fjs);
-      return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
-    }(document, "script", "twitter-wjs"));
+  .directive('album', ['$http', function(){
     return {
       restrict: 'A',
       link: function ($scope, element, attrs) {
@@ -45,10 +38,6 @@ angular
           TweenLite.set([".back", ".front"], {backfaceVisibility:"hidden"});
           TweenMax.staggerTo($(".card"), 1, {rotationY:-180, repeat:1, yoyo:true}, 0.1);
         }
-        $scope.twitterLoad = () => {
-            twttr.widgets.load();
-
-        }
         //Animations for mouse hover
         element.on('mouseenter', function () {
            TweenLite.to($(this).find(".card"), 1.2, {rotationY:180, ease:Back.easeOut});
@@ -57,7 +46,6 @@ angular
           TweenLite.to($(this).find(".card"), 1.2, {rotationY:0, ease:Back.easeOut});
         });
         $scope.initAlbum();
-        $scope.twitterLoad();
       }
     }
-  });
+  }]);

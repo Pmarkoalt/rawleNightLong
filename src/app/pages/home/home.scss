@@ -5,7 +5,9 @@
 
   &__logo{
     height: 40vh;
-    margin-left: 300px;
+    margin-left: 15vw;
+    -webkit-animation: bump 1s infinite alternate; /* Safari 4.0 - 8.0 */
+    animation: bump 1s infinite alternate;
   }
 
   &__main{
@@ -105,6 +107,34 @@
         margin: 10px;
       }
 
+      &__twitterContainer{
+
+        &__tweet{
+          box-shadow: -3px 1px 3px black;
+          margin-bottom: 10px;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          transform: scale(1);
+          transition: all .5s;
+
+          &__text{
+            color: rgb(208, 208, 208);
+            font-family: helvetica neue;
+            font-size: 18px;
+            font-weight: light;
+          }
+
+          &__image{
+            max-width: 50%;
+          }
+        }
+
+        &__tweet:hover{
+          transform: scale(1.1);
+        }
+      }
+
     }
   }
 }
@@ -165,6 +195,14 @@
   }
 }
 
+.sectionHeader{
+  font-family: helvetica neue;
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: white;
+}
+
 .tourHeader{
   font-family: "acumin-pro",sans-serif;
   font-size: 20px
@@ -209,4 +247,35 @@
 
 h1 {
   font-size: 3rem;
+}
+
+
+//animations{
+//Animations
+
+@-webkit-keyframes bump {
+    0%   {
+      -webkit-transform: scale(1); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+      -ms-transform: scale(1); /* IE 9 */
+      transform: scale(1);
+    }
+    100% {
+      -webkit-transform: scale(1.2); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+      -ms-transform: scale(1.2); /* IE 9 */
+      transform: scale(1.2);
+    }
+}
+
+/* Standard syntax */
+@keyframes bump {
+  0%   {
+    -webkit-transform: scale(1); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+    -ms-transform: scale(1); /* IE 9 */
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+    -ms-transform: scale(1.2); /* IE 9 */
+    transform: scale(1.2);
+  }
 }

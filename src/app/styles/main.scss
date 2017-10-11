@@ -31,13 +31,3 @@
 
 // Tests
 @import "tests/tests";
-
-//fonts
-@font-face {
-  font-family: "Helvetica-Neue-Light";
-  src: url("/public/fonts/HelveticaNeue-Light.otf") format("otf");
-}
-@font-face {
-  font-family: "Helvetica-Neue-Bold";
-  src: url("/public/fonts/helvetica-neue-bold.tff") format("tff");
-}

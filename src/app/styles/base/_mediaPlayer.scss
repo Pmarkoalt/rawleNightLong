@@ -35,14 +35,33 @@ footer{
   }
 }
 
-#sc{
+#fb{
+  transition: all .5s;
+  transform: scale(1);
+}
+
+#fb:hover{
   transform: scale(1.1);
 }
 
+#sc{
+  transition: all .5s;
+  transform: scale(1.1);
+}
+
+#sc:hover{
+  transform: scale(1.2);
+}
+
 #tw{
+  transition: all .5s;
   transform: scale(1.3);
   margin-bottom: 1px;
   margin-right: 5px;
+}
+
+#tw:hover{
+  transform: scale(1.4)
 }
 
 #twCont{
@@ -50,5 +69,11 @@ footer{
 }
 
 #ig{
+    transition: all .5s;
     height: 26px;
+    transform: scale(1.0);
+}
+
+#ig:hover{
+  transform: scale(1.1);
 }
