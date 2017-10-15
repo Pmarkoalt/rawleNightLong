@@ -3,12 +3,31 @@
   background-color: #111;
   font-family: "acumin-pro",sans-serif;
 
-  &__logo{
-    height: 40vh;
-    margin-left: 15vw;
-    -webkit-animation: bump 1s infinite alternate; /* Safari 4.0 - 8.0 */
-    animation: bump 1s infinite alternate;
+  &__banner{
+    display: flex;
+    justify-content: space-around;
+
+    &__logo{
+      height: 40vh;
+      -webkit-animation: bump 1s infinite alternate; /* Safari 4.0 - 8.0 */
+      animation: bump 1s infinite alternate;
+    }
+
+    &__about{
+      margin-top: 100px;
+      color: white;
+      font-weight: bold;
+      font-size: 60px;
+      transition: color .5s;
+    }
+
+    &__about:hover{
+      color: #ff0090
+    }
+
   }
+
+
 
   &__main{
     margin-bottom: 50px;
@@ -26,12 +45,13 @@
 
         &__img{
           width: 100%;
+          box-shadow: -3px 1px 3px black;
           transform: scale(1);
           transition: all .5s;
         }
 
         &__img:hover{
-          box-shadow: -3px 1px 3px black;
+          box-shadow: -3px 4px 9px 1px black;
           transform: scale(1.1);
         }
 
@@ -47,6 +67,8 @@
       flex-direction: column;
       align-items: center;
       margin-bottom: 50px;
+      margin-left: 20px;
+      margin-right: 20px;
 
       &__container{
         margin: 10px;
@@ -77,9 +99,10 @@
         background-color: #111;
 
         &__tourDate{
+          width: 90%;
           background-color: #111;
           box-shadow: -3px 1px 3px black;
-          margin-bottom: 10px;
+          margin-bottom: 25px;
           padding: 5px;
           display: flex;
           flex-direction: row;
@@ -99,6 +122,7 @@
 
         &__tourDate:hover{
           transform: scale(1.1);
+          box-shadow: -3px 4px 9px 1px black;
         }
       }
 
@@ -110,8 +134,9 @@
       &__twitterContainer{
 
         &__tweet{
+          width: 90%;
           box-shadow: -3px 1px 3px black;
-          margin-bottom: 10px;
+          margin-bottom: 25px;
           padding: 20px;
           display: flex;
           flex-direction: column;
@@ -132,6 +157,7 @@
 
         &__tweet:hover{
           transform: scale(1.1);
+          box-shadow: -3px 4px 9px 1px black;
         }
       }
 
@@ -141,16 +167,16 @@
 
 //album card
 .cardWrapper{
-  width:200px;
-  height:200px;
+  width:250px;
+  height:250px;
   position:relative;
   margin-bottom: 20px;
 }
 
 .cardFace{
   position:absolute;
-  width:200px;
-  height:200px;
+  width:250px;
+  height:250px;
   overflow:hidden;
   background-size: cover;
 }
@@ -195,6 +221,11 @@
   }
 }
 
+.pink{
+  color: #ff0090 !important;
+  display: none;
+}
+
 .sectionHeader{
   font-family: helvetica neue;
   font-weight: bold;
@@ -216,7 +247,7 @@
 .tourTicket{
   transition: all .5s;
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
   right: 50px;
 }
 
@@ -249,8 +280,11 @@ h1 {
   font-size: 3rem;
 }
 
+.showTweet{
+  display: block !important;
+}
 
-//animations{
+
 //Animations
 
 @-webkit-keyframes bump {
@@ -278,4 +312,98 @@ h1 {
     -ms-transform: scale(1.2); /* IE 9 */
     transform: scale(1.2);
   }
+}
+
+/*
+===================================
+    MEDIA QUERIES
+===================================
+*/
+
+@media (max-width: 1200px) {
+
+
+}
+
+@media (max-width: 960px) {
+  .home__main__promo__container{
+    max-width: 80%;
+  }
+
+}
+
+@media (max-width: 760px) {
+  .home__banner{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home__banner__logo{
+    width: 50vw;
+    height: auto;
+  }
+
+  .home__banner__about{
+    margin-top: 0px;
+    margin-bottom: 50px;
+    font-size: 8.7vw;
+    font-size: 41px;
+  }
+
+  .home__main__promo__container{
+    max-width: 33%;
+  }
+
+  .home__main{
+    flex-direction: column-reverse;
+  }
+
+  .home__banner__about{
+    color: #ff0090;
+  }
+
+  .sectionHeader{
+    text-align: center !important;
+    width: 100%;
+  }
+
+  .home__main__press__tourContainer__tourDate,
+  .home__main__press__twitterContainer__tweet{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .home__main__press__twitterContainer__tweet{
+    display: none;
+  }
+
+  .pink{
+    display: block;
+    font-size: 65px !important;
+  }
+
+  .home__main__promo__container{
+    max-width: 90%;
+  }
+
+  .home__main__promo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home__main__promo__container__img:hover{
+    transform: scale(1);
+  }
+
+
+}
+
+@media (max-width: 480px) {
+  .home__banner__logo{
+    width: 240px;
+  }
+
 }

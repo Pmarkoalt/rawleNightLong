@@ -29,7 +29,6 @@ app.get("/api/twitter", function(req,res){
         if (item.entities.media){
             tweet.picture = item.entities.media[0].media_url;
         }
-
         content.push(tweet);
       });
       res.send(content);

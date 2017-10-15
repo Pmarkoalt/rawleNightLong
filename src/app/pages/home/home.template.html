@@ -3,7 +3,8 @@
 
 <div class="home">
   <div class="home__banner">
-      <img class="home__logo rythm pulse1" id="home__logo" src="public/img/logo.png" />
+      <img class="home__banner__logo" id="home__logo" src="public/img/logo.png" />
+      <a class="home__banner__about" ui-sref="about"> WHO AM I? </a>
   </div>
   <div class="home__main">
     <div class="home__main__promo">
@@ -46,8 +47,8 @@
         </div>
       </div>
       <div class="home__main__press__twitterContainer">
-        <h1 class="sectionHeader"> TWEETS </h1>
-        <div class="home__main__press__twitterContainer__tweet" ng-repeat="tweet in home.twitter">
+        <h1 class="sectionHeader"> TWEETS </h1> <h1 class="sectionHeader pink" ng-click="home.handleTwitter()"> {{home.showTwitter ? "-" : "+"}} </h1>
+        <div class="home__main__press__twitterContainer__tweet" ng-class="{'showTweet': home.showTwitter}" ng-repeat="tweet in home.twitter">
           <!-- <h3> {{tweet.user}} </h1> -->
           <p class="home__main__press__twitterContainer__tweet__text"> {{tweet.text.replace("&amp;", "&")}} </p>
           <img class="home__main__press__twitterContainer__tweet__image" ng-src={{tweet.picture}} />

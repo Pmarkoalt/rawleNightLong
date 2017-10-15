@@ -77,3 +77,63 @@ footer{
 #ig:hover{
   transform: scale(1.1);
 }
+
+.socials{
+  padding-right: 10px;
+}
+
+@media (max-width: 1200px) {
+
+
+}
+
+@media (max-width: 960px) {
+  .audio-player-div{
+    width: 70%;
+  }
+
+  .socials{
+    width: 30%;
+  }
+
+}
+
+@media (max-width: 760px) {
+  #fb{
+    width: 5vw;
+  }
+
+  #sc{
+    width: 5vw;
+    // margin-top: -5px;
+  }
+
+  #tw{
+    width: 5vw;
+  }
+
+  #ig{
+    margin-top: 3px;
+    width: calc(5vw - .4em);
+  }
+
+  #ig:hover,
+  #tw:hover,
+  #fb:hover,
+  #sc:hover
+  {
+
+  }
+
+}
+
+@media (max-width: 480px) {
+  #ig{
+    margin-top: 3px;
+  }
+
+  #sc{
+    margin-top: -2px;
+  }
+
+}

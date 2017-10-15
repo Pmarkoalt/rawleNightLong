@@ -1,7 +1,6 @@
 //Reset
 @import "vendor/reset";
 @import "vendor/plyr";
-@import "vendor/twitter";
 
 // Variables, functions, mixins and utils
 @import "base/_variables";
@@ -23,11 +22,11 @@
 @import "layout/_print";
 
 // Components
-@import "../components/foo-bar/foo-bar";
 
 // Pages
 @import "../pages/home/home";
 @import "../pages/releases/release";
+@import "../pages/about/about";
 
 // Tests
 @import "tests/tests";
