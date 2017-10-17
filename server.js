@@ -59,11 +59,6 @@ app.get('*', (req, res) => {
   res.sendFile(__dirname + "/index.html");
 })
 
-const options = {
-    key: fs.readFileSync(__dirname + '/server.key'),
-    cert: fs.readFileSync(__dirname + '/server.crt')
-}
-
 app.listen(PORT, function () {
   console.log('Example app listening on port 8080!')
 })
