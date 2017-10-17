@@ -4,13 +4,9 @@ const http = require('http');
 const express = require('express');
 const expressStaticGzip = require("express-static-gzip");
 const compression = require('compression');
-const logger = require('morgan');
 const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 8080;
-
-//set up morang logger
-app.use(logger('dev'));
 
 //compression filter
 function shouldCompress(req, res) {
