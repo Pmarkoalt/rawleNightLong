@@ -6,8 +6,7 @@ import AboutTemplate from './about.template.html'
 // // Directives
 // import FooBar from '../../components/foo-bar/foo-bar.component'
 
-angular
-  .module('app.about', [
+angular.module('app.about', [
     'ui.router'
   ])
   .config(($stateProvider) => {

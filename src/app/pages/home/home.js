@@ -1,7 +1,6 @@
 import angular from 'angular';
 import $ from 'jquery';
 import uiRouter from "@uirouter/angularjs";
-import Rythm from 'rythm.js'
 
 import ngAnimate from 'angular-animate';
 

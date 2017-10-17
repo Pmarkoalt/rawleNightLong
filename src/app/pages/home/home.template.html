@@ -3,15 +3,18 @@
 
 <div class="home">
   <div class="home__banner">
-      <img class="home__banner__logo" id="home__logo" src="public/img/logo.png" />
+      <picture>
+        <source class="home__banner__logo" id="home__logo" srcset="public/img/logo.webp" />
+        <source class="home__banner__logo" id="home__logo" srcset="public/img/logo.png" />
+        <img class="home__banner__logo" id="home__logo" src="public/img/logo.png" />
+      </picture>
       <a class="home__banner__about" ui-sref="about"> WHO AM I? </a>
   </div>
   <div class="home__main">
     <div class="home__main__promo">
       <h1 class="sectionHeader" style="text-align: right"> PRESS PHOTOS </h1>
       <div class="home__main__promo__container" ng-repeat="Src in home.promoSrc" ng-click="home.promoZoom(this)" ng-class="{'fullPhoto': promoZoom, 'smallPhoto': !promoZoom}">
-        <img class="home__main__promo__container__img" alt="{{Src.sys.id}}" ng-init="promoZoom = false" ng-src="{{Src.fields.file.url}}" />
-
+        <img class="home__main__promo__container__img lazy" alt="{{Src.alt}}" ng-init="promoZoom = false" src="./public/img/placeholder.png" data-ng-src="{{Src.src}}" />
       </div>
     </div>
     <div class="home__main__albums">

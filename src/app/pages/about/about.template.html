@@ -2,7 +2,11 @@
   <a class="about__back" ui-sref="home"> <img class="release__back__img" src="./public/favicons/back.svg" /> </a>
     <div class="about__content">
       <div class="about__content__photoCont">
-        <img class="about__content__photoCont__image" src="./public/img/about.png" alt="Rawle About Photo" />
+        <picture>
+          <source class="about__content__photoCont__image" srcset="./public/img/about.webp" alt="Rawle About Photo" />
+          <source class="about__content__photoCont__image" srcset="./public/img/about.png" alt="Rawle About Photo" />
+          <img class="about__content__photoCont__image" src="./public/img/about.png" alt="Rawle About Photo" />
+        </picture>
       </div>
 
       <div class="about__content__textCont">

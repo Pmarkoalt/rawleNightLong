@@ -3,6 +3,10 @@
 //
 //
 
+#audio-player{
+  display: block !important;
+}
+
 audio{
   width: 100%;
 }
@@ -22,7 +26,7 @@ footer{
 .socials{
   background-color: #111;
   width:20%;
-  display: flex;
+  display: flex !important;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;

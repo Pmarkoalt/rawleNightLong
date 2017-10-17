@@ -7,6 +7,7 @@ const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
     debug: true,
@@ -67,9 +68,32 @@ module.exports = {
       }),
 
       // Dedupe modules in the output
-      // new webpack.optimize.DedupePlugin(),
+      new webpack.optimize.DedupePlugin(),
       // // Minify all javascript, switch loaders to minimizing mode
-      // new webpack.optimize.UglifyJsPlugin()
+      new webpack.optimize.UglifyJsPlugin({
+        mangle: true,
+        sourceMap: false,
+        compress: {
+          warnings: false, // Suppress uglification warnings
+          pure_getters: false,
+          unsafe: true,
+          unsafe_comps: true,
+          screw_ie8: true
+        },
+        output: {
+          comments: false,
+        },
+        exclude: [/\.min\.js$/gi] // skip pre-minified libs
+      }),
+      new webpack.IgnorePlugin(/^\.\/locale$/, [/moment$/]),
+      new webpack.NoErrorsPlugin(),
+      new CompressionPlugin({
+        asset: "[path].gz[query]",
+        algorithm: "gzip",
+        test: /\.js$|\.css$|\.html$/,
+        threshold: 10240,
+        minRatio: 0
+      })
     ],
     resolve: {
       extensions: ['', '.webpack.js', '.web.js', '.js']
@@ -89,5 +113,6 @@ module.exports = {
         chunk: false
       }
     },
-    devtool: "source-map",
+    // devtool: "cheap-module-source-map",
+    devtool: "cheap-module-source-map"
 };

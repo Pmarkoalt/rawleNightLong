@@ -1,10 +1,6 @@
 class AboutController {
   constructor( $scope, $http, $stateParams, $state) {
-    this.state = "test"
 
-  }
-  foo() {
-    return 'world'
   }
 
 }

@@ -21,4 +21,13 @@ angular
   ])
   .config(($urlRouterProvider) => {
     $urlRouterProvider.otherwise('/')
-  })
+  });
+  function lazyLoad(){
+    var lazy =
+    document.getElementsByClassName('lazy');
+
+    for(var i=0; i<lazy.length; i++){
+       lazy[i].src =
+           lazy[i].getAttribute('data-src');
+    }
+}

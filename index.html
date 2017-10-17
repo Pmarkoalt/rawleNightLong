@@ -3,19 +3,26 @@
   <head>
     <title>Rawle Night Long</title>
     <meta charset="UTF-8">
+    <meta name="description" content="DC DJ Rawle Night Long" />
+    <meta name="keywords" content="Rawle Night Long, Public.Group, SiriusXM, DJ, Electronic Music">
+    <meta name="author" content="Peter Markoski - Public.Group">  
+    <meta name="theme-color" content="#111">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta itemprop="name" content="Ralw Night Long">
+    <meta itemprop="description" content="DC DJ Rawle Night Long">
     <base href="/">
-    <script src="https://use.typekit.net/rul3cbj.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
   </head>
-  <body>
+  <body style="background-color: #111;">
     <main>
       <div id="app" ui-view="app"></div>
     </main>
     <footer>
       <div class="audio-player-div">
-        <audio controls id="audio-player" src="https://api.soundcloud.com/tracks/314297258/stream?client_id=95f22ed54a5c297b1c41f72d713623ef" type="audio/mp3"></audio>
+        <audio style="display: none;" controls id="audio-player" src="https://api.soundcloud.com/tracks/314297258/stream?client_id=95f22ed54a5c297b1c41f72d713623ef" type="audio/mp3"></audio>
       </div>
-      <div class="socials">
+      <div style="display: none;" class="socials">
         <a class="socials__svg" href="https://www.facebook.com/rawlenightlong/" target="_blank"> <img id="fb" src="./public/favicons/FB.svg" /> </a>
         <a class="socials__svg" href="https://www.instagram.com/rawlenightlong/" target="_blank"> <img id="ig" src="./public/favicons/IG.svg" /> </a>
         <a id="twCont" class="socials__svg" href="https://twitter.com/rawlenightlong?lang=en" target="_blank"> <img id="tw" src="./public/favicons/TW.svg" /> </a>
@@ -23,5 +30,11 @@
       </div>
     </footer>
   </body>
+  <noscript>
+    <img style="width: 300px; height: auto; margin-top: 100px; position: fixed;" src="./public/img/logo.png" />
+    <p style="font-size:20px; color: white;">Sorry, to load this page you must have javascript enabled!</p>
+  </noscript>
   <script src="./public/bundle.js"> </script>
+  <script src="https://use.typekit.net/rul3cbj.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </html>
