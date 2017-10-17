@@ -1,5 +1,4 @@
 require('dotenv').config();
-const spdy = require('spdy');
 const path = require('path');
 const http = require('http');
 const express = require('express');
@@ -64,27 +63,10 @@ app.get('*', (req, res) => {
   res.sendFile(__dirname + "/index.html");
 })
 
-// app.get('*', (req, res) => {
-//     res
-//       .status(200)
-//       .json({message: 'ok'})
-// })
-
 const options = {
     key: fs.readFileSync(__dirname + '/server.key'),
     cert: fs.readFileSync(__dirname + '/server.crt')
 }
-
-// spdy
-//   .createServer(options, app)
-//   .listen(PORT, (error) => {
-//     if (error) {
-//       console.error(error)
-//       return process.exit(1)
-//     } else {
-//       console.log('Listening on port: ' + PORT + '.')
-//     }
-//   })
 
 app.listen(PORT, function () {
   console.log('Example app listening on port 8080!')
