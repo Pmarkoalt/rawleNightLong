@@ -19,8 +19,10 @@ angular
     'app.about',
     'ngAnimate'
   ])
-  .config(($urlRouterProvider) => {
+  .config(($urlRouterProvider, $locationProvider) => {
     $urlRouterProvider.otherwise('/')
+    $locationProvider
+  .html5Mode(true);
   });
   function lazyLoad(){
     var lazy =

@@ -3,11 +3,7 @@
 
 <div class="home">
   <div class="home__banner">
-      <picture>
-        <source class="home__banner__logo" id="home__logo" srcset="public/img/logo.webp" />
-        <source class="home__banner__logo" id="home__logo" srcset="public/img/logo.png" />
         <img class="home__banner__logo" id="home__logo" src="public/img/logo.png" />
-      </picture>
       <a class="home__banner__about" ui-sref="about"> WHO AM I? </a>
   </div>
   <div class="home__main">
@@ -54,7 +50,7 @@
         <div class="home__main__press__twitterContainer__tweet" ng-class="{'showTweet': home.showTwitter}" ng-repeat="tweet in home.twitter">
           <!-- <h3> {{tweet.user}} </h1> -->
           <p class="home__main__press__twitterContainer__tweet__text"> {{tweet.text.replace("&amp;", "&")}} </p>
-          <img class="home__main__press__twitterContainer__tweet__image" ng-src={{tweet.picture}} />
+          <img ng-if="tweet.picture === {}" class="home__main__press__twitterContainer__tweet__image" ng-src={{tweet.picture}} />
         </div>
       </div>
     </div>
